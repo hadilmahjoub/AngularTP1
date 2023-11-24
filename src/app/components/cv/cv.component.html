@@ -1,8 +1,10 @@
-<div class="row">
-  <div class="col-md-6 col-sm-3">
-    <app-list (selectedCv)="selectCv($event)" [cvs]="cvs" />
-  </div>
-  <div class="col-md-6 col-sm-9">
-    <app-detail [cv]="selectedCv" />
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <app-list (selectedCv)="selectCv($event)" [cvs]="cvs"/>
+    </div>
+    <div class="col">
+      <app-detail *ngIf="selectedCv" [cv]="selectedCv" />
+    </div>
   </div>
 </div>

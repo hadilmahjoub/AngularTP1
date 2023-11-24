@@ -1,6 +1,6 @@
 <ol class="list-group">
-  <app-item (selectedCv)="selectCv($event)" [cv]="cvs[0]" />
-  <app-item (selectedCv)="selectCv($event)" [cv]="cvs[1]" />
+  <app-item *ngFor="let item of cvs" (selected)="selectCv($event)" [cv]="item" />
+  <!-- <app-item (selected)="selectCv($event)" [cv]="cvs[1]" /> -->
 </ol>
 
 <!-- DONE -->

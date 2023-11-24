@@ -8,14 +8,13 @@ import { Cv } from 'src/app/models/cv';
 })
 export class ItemComponent implements OnInit {
   @Input() cv: Cv = new Cv();
-
-  @Output() selectedCv = new EventEmitter();
+  @Output() selected = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  selectCv(){
-    this.selectedCv.emit(this.cv);
+  returnSelectedCv() {
+    this.selected.emit(this.cv);
   }
 }

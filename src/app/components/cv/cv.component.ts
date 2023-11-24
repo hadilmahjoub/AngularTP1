@@ -8,7 +8,7 @@ import { Cv } from 'src/app/models/cv';
 })
 export class CvComponent implements OnInit {
   cvs: Cv[] = [];
-  selectedCv: Cv = new Cv();
+  selectedCv: Cv | undefined;
 
   constructor() {}
 
@@ -18,24 +18,19 @@ export class CvComponent implements OnInit {
         0,
         'Mahjoub',
         'Hadil',
-        'rotating_card_profile.png',
+        'cv_profile_2.png',
         'Student',
         12345678,
         22
       ),
-      new Cv(
-        1,
-        'Omri',
-        'Wejden',
-        'rotating_card_profile.png',
-        'Student',
-        11223344,
-        22
-      ),
+      new Cv(1, 'Omri', 'Wejden', 'cv_profile_1.png', 'Student', 11223344, 22),
+      new Cv(2, 'Unknown', 'Test', ' ', 'None', 666666666, 99),
     ];
+
+    // this.selectCv(this.cvs[0]);
   }
 
-  selectCv(cv: any){
-    this.selectCv = cv;
+  selectCv(cv: any) {
+    this.selectedCv = cv;
   }
 }

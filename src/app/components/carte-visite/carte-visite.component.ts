@@ -9,7 +9,7 @@ export class CarteVisiteComponent {
   nom: string = 'Nom';
   prenom: string = 'Prenom';
   job: string = 'Job';
-  image: string = 'rotating_card_profile.png';
+  image: string = 'cv_profile_1.png';
   favCit: string = 'Citation Favorite';
   jobDesc: string = 'Description du travail';
   jobKeywords: string = 'HTML CSS JS PHP Symphony Angular';
