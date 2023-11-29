@@ -8,7 +8,7 @@ import { Cv } from 'src/app/models/cv';
 })
 export class CvComponent implements OnInit {
   cvs: Cv[] = [];
-  selectedCv: Cv | undefined;
+  selectedCv!: Cv ;
 
   constructor() {}
 

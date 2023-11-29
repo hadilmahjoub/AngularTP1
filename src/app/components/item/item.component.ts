@@ -7,8 +7,10 @@ import { Cv } from 'src/app/models/cv';
   styleUrls: ['./item.component.css'],
 })
 export class ItemComponent implements OnInit {
-  @Input() cv: Cv = new Cv();
-  @Output() selected = new EventEmitter();
+  @Input({ required: true })
+  cv!: Cv;
+
+  @Output() selected = new EventEmitter<Cv>();
 
   constructor() {}
 

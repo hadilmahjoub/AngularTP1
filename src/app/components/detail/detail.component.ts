@@ -8,7 +8,7 @@ import { Cv } from 'src/app/models/cv';
 })
 export class DetailComponent implements OnInit {
   isHidden = true;
-  @Input() cv: Cv = new Cv();
+  @Input({required: true}) cv!: Cv;
 
   constructor(){}
 
